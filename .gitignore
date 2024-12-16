@@ -1,0 +1,9 @@
+
+*.env
+/agModels-full/*
+!/agModels-full/agModels_in_process.txt
+*.csv
+!/data_files/*
+*.sqlite
+*.tar.gz
+*.parquet
