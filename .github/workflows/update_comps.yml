@@ -3,6 +3,8 @@ name: update comps
 on:
   schedule:
     - cron: '0 1 * * MON-FRI' # At 00:00 on Monday
+  push:
+    branches: [ "main" ]
 
 jobs:
   build:
