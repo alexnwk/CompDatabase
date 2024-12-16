@@ -1,7 +1,5 @@
 
 
-tickers = ['AAPL', 'MSFT', 'CDNA', 'ME']
-
 from functions import fmp
 import warnings
 warnings.simplefilter(action='ignore', category=FutureWarning)
@@ -17,7 +15,7 @@ def build_comp_database(tickers):
         print(ticker)
 
         df = fmp.company_profile(ticker)
-        if len(df) == 0: break
+        if len(df) == 0: continue
 
         ev = fmp.download_enterprise_value(ticker).iloc[0]
 
