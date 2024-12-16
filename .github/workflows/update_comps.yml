@@ -27,7 +27,7 @@ jobs:
 
       - name: set envs
         run: |
-          FMP_API_KEY=${{ secrets.FMP_API_KEY }}
+          echo "FMP_API_KEY=${{ secrets.FMP_API_KEY }}" >> ./.env
 
       - name: Generate Comp CSVs
         run: python update_comps.py
